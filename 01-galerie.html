@@ -11,7 +11,15 @@
 <body x-data="{
     imageIsOpen: 'https://picsum.photos/id/237/400/300',
 }">
-    <h1>Galerie</h1>
+    <h1>Galerie</h1> 
+    <img src="https://picsum.photos/id/236/40/60" alt="miniature chiot"
+         @click="imageIsOpen = 'https://picsum.photos/id/236/400/300'"
+         class="miniature"
+    >
+    <img src="https://picsum.photos/id/237/40/60" alt="miniature chiot"
+         @click="imageIsOpen = 'https://picsum.photos/id/237/400/300'"
+         class="miniature"
+    >
     <p>lorem⇥</p>
     <div class="overlay"
       x-show="imageIsOpen"
@@ -19,9 +27,6 @@
       @keyup.escape.window="imageIsOpen = null"
     >
     <figure><img :src="imageIsOpen" alt="image 237... un chiot"></figure>
-    <img src="https://picsum.photos/id/236/40/60" alt="miniature chiot"
-         @click="imageIsOpen = https://picsum.photos/id/236/200/300">
-    <img src="https://picsum.photos/id/237/40/60" alt="miniature chiot">
 </div>
 </body>
 </html>
